@@ -72,5 +72,9 @@ https://www.nginx.com/blog/performance-testing-nginx-ingress-controllers-dynamic
 This include default deny rules which block the CDP Private Cloud installation.
 
 Check NetworkPolicies
+
 Check iptables on ECS server
+
+```
 k get NetworkPolicy -A 
+```
