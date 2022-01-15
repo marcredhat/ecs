@@ -6,6 +6,9 @@
 openssl s_client -connect <controlplane>:443
 ```
 
+Before installing ECS, clean up iptables on all the ECS machines: https://github.com/marcredhat/iptables
+
+
 2) Corrupt DNS cache
 
 ```
