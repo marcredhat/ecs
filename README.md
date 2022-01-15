@@ -46,7 +46,8 @@ data:
 ```
 
 
-4) 
+4) strace
+
 ```
 strace -e trace=network -r -f curl -k  -vvv --write-out '\nlookup:        %{time_namelookup}\nconnect:       %{time_connect}\nappconnect:    %{time_appconnect}\npretransfer:   %{time_pretransfer}\nredirect:      %{time_redirect}\nstarttransfer: %{time_starttransfer}\ntotal:         %{time_total}\n' https://vault.localhost.localdomain/v1/sys/seal-status
 ```
