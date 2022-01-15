@@ -12,13 +12,16 @@ openssl s_client -connect <controlplane>:443
 strings /var/db/nscd/hosts
 ```
 
-Noticed that nscd had lots of incorrect entries so cleaned it:```
+Noticed that nscd had lots of incorrect entries so cleaned it:
+```
 nscd --invalidate=hosts
 ```
 
 3) Known rke2-ingress-nginx-controller issues and fixes
- 
+
+```
 k exec -it  rke2-ingress-nginx-controller-... -n kube-system -- top
+```
 
 Check number of worker processes and CPU utilisation 
 
