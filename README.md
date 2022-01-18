@@ -81,3 +81,11 @@ Check iptables on ECS server
 ```
 k get NetworkPolicy -A 
 ```
+
+7) Security tools can interfere with docker pull and load processes
+
+This can be quickly identified using strace:
+
+```
+strace -Tttvfxs 4096 -o /tmp/docker-pull-fail.txt /opt/cloudera/parcels/ECS-1.3.3-b128-ecs-1.3.3-b128.p0/docker/docker load < pilot-1.9.5.tar.gz
+```
